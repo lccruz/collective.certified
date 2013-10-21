@@ -13,6 +13,7 @@ parts/
 var/
 include/
 lib/
-coverage/
+.coverage
+htmlcov/
 src/
 *.log

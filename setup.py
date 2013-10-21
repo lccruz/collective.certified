@@ -32,8 +32,6 @@ long_description = (
     'Download\n'
     '********\n')
 
-tests_require = ['zope.testing']
-
 setup(name='collective.certified',
       version=version,
       description="",
@@ -53,12 +51,14 @@ setup(name='collective.certified',
       namespace_packages=['collective', ],
       include_package_data=True,
       zip_safe=False,
-      install_requires=['setuptools',
-                        # -*- Extra requirements: -*-
-                        ],
-      tests_require=tests_require,
-      extras_require=dict(tests=tests_require),
-      test_suite='collective.certified.tests.test_docs.test_suite',
+      install_requires=[
+          'setuptools',
+      ],
+      extras_require={
+          'test': [
+              'plone.app.testing',
+          ],
+      },
       entry_points="""
       # -*- entry_points -*-
       [z3c.autoinclude.plugin]
