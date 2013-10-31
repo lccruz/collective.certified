@@ -20,6 +20,3 @@ def test_suite():
                 doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS),
 
         ])
-
-if __name__ == '__main__':
-    unittest.main(defaultTest='test_suite')
